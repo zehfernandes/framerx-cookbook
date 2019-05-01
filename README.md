@@ -15,7 +15,7 @@ This is a list of short and useful Framer X tips to build impressive prototypes.
 <br/>
 
 #### How to share data between components using override?
-```
+```js
 import { Data, Override } from "framer"
 
 const data = Data({
