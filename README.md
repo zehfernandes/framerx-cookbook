@@ -3,7 +3,7 @@ This is a list of short and useful Framer X tips to build impressive prototypes.
 
 <br/>
 
-- [How to share data between components using override?](#how-to-detect-if-a-component-has-children-nodes)
+- [How to share data between components using override?](#how-to-share-data-between-components-using-override)
 - [How to detect if a component has children nodes?](#how-to-detect-if-a-component-has-children-nodes)
 - [How to import JSON files with data?](#how-to-import-json-files-with-data)
 - [How to use a design component structure inside your code component?](#how-to-use-a-design-component-structure-inside-your-code-component)
