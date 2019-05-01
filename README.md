@@ -3,6 +3,8 @@ This is a list of short and useful Framer X tips to build impressive prototypes.
 
 <br/>
 
+- [How to share data between components using override?](#how-to-detect-if-a-component-has-children-nodes)
+- [How to detect if a component has children nodes?](#how-to-detect-if-a-component-has-children-nodes)
 - [How to import JSON files with data?](#how-to-import-json-files-with-data)
 - [How to use a design component structure inside your code component?](#how-to-use-a-design-component-structure-inside-your-code-component)
 - [How to wrap an installed component with your code component?](#how-to-wrap-a-installed-component-with-your-code-component)
@@ -11,6 +13,41 @@ This is a list of short and useful Framer X tips to build impressive prototypes.
 - [How to install an npm package?](#how-to-install-an-npm-package)
 
 <br/>
+
+#### How to share data between components using override?
+```
+import { Data, Override } from "framer"
+
+const data = Data({
+    text: "Overview",
+})
+
+export const TextChange: Override = props => {
+    return {
+        onValueChange: (text: string) => {
+            data.text = text
+        }
+    }
+}
+
+export const GetText: Override = el => {
+    let page = 0
+    
+    if (data.text == "Overview") page = 1
+    if (data.text == "Interaction") page = 2
+
+    return {
+        page: page,
+    }
+}
+
+```
+
+#### How to detect if a component has children nodes?
+```js
+const hasChildren = (children: React.ReactNode) =>
+  !!React.Children.count(children);
+```
 
 #### How to import JSON files with data?
 ```js
